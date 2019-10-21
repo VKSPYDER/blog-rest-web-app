@@ -1,0 +1,20 @@
+service:
+  baseUri: "https://jsonplaceholder.typicode.com"
+  get:
+    users:
+      url: ${service.baseUri}/users
+    posts:
+      url: ${service.baseUri}/posts
+    comments:
+      url: ${service.baseUri}/comments
+  response-code:
+    404:
+      message: "JSON Place Holder service unavailable, please Try again after some time."
+      code: 404
+    403:
+      message: "User not authorised to access service."
+      code: 403
+
+logging:
+  level:
+    ROOT: INFO
